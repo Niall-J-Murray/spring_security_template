@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <link href="/css/general.css" rel="stylesheet" th:href="@{/css/general.css}" type="text/css"/>
+  <title>Test</title>
+</head>
+<body>
+<header>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/login">Login</a></li>
+    <div th:if="${isLoggedIn == true}">
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/admin">Admin</a></li>
+      <li><a href="/confirm_logout">Logout</a></li>
+    </div>
+  </ul>
+</header>
+<h1>
+  Unsecured Test Page
+</h1>
+<h1>Logout Page</h1>
+
+</body>
+</html>
