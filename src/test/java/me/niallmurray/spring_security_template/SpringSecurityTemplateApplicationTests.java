@@ -1,10 +1,10 @@
-package me.niallmurray.spring_template;
+package me.niallmurray.spring_security_template;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringTemplateApplicationTests {
+class SpringSecurityTemplateApplicationTests {
 
   @Test
   void contextLoads() {

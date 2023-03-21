@@ -1,9 +1,9 @@
-package me.niallmurray.spring_template.service;
+package me.niallmurray.spring_security_template.service;
 
 
-import me.niallmurray.spring_template.domain.User;
-import me.niallmurray.spring_template.repositories.UserRepository;
-import me.niallmurray.spring_template.security.UserDetailsImpl;
+import me.niallmurray.spring_security_template.domain.User;
+import me.niallmurray.spring_security_template.repositories.UserRepository;
+import me.niallmurray.spring_security_template.security.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,4 +1,4 @@
-package me.niallmurray.spring_template.domain;
+package me.niallmurray.spring_security_template.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;

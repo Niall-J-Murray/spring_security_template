@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.niallmurray</groupId>
-    <artifactId>spring_template</artifactId>
+    <artifactId>spring_security_template</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring_template</name>
     <description>spring_template</description>

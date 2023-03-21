@@ -1,7 +1,7 @@
-package me.niallmurray.spring_template.web;
+package me.niallmurray.spring_security_template.web;
 
-import me.niallmurray.spring_template.domain.User;
-import me.niallmurray.spring_template.service.UserService;
+import me.niallmurray.spring_security_template.domain.User;
+import me.niallmurray.spring_security_template.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

@@ -1,4 +1,4 @@
-package me.niallmurray.spring_template.security;
+package me.niallmurray.spring_security_template.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

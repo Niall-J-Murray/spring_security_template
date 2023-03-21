@@ -1,6 +1,6 @@
-package me.niallmurray.spring_template.web;
+package me.niallmurray.spring_security_template.web;
 
-import me.niallmurray.spring_template.security.ActiveUserStore;
+import me.niallmurray.spring_security_template.security.ActiveUserStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

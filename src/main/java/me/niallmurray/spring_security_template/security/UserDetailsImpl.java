@@ -1,7 +1,7 @@
-package me.niallmurray.spring_template.security;
+package me.niallmurray.spring_security_template.security;
 
 
-import me.niallmurray.spring_template.domain.User;
+import me.niallmurray.spring_security_template.domain.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serial;

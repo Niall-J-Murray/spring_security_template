@@ -1,4 +1,4 @@
-package me.niallmurray.spring_template;
+package me.niallmurray.spring_security_template;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

@@ -1,8 +1,7 @@
-package me.niallmurray.spring_template.repositories;
+package me.niallmurray.spring_security_template.repositories;
 
 
-
-import me.niallmurray.spring_template.domain.User;
+import me.niallmurray.spring_security_template.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

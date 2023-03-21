@@ -1,10 +1,10 @@
-package me.niallmurray.spring_template.domain;
+package me.niallmurray.spring_security_template.domain;
 
 import jakarta.servlet.http.HttpSessionBindingEvent;
 import jakarta.servlet.http.HttpSessionBindingListener;
 import lombok.Getter;
 import lombok.Setter;
-import me.niallmurray.spring_template.security.ActiveUserStore;
+import me.niallmurray.spring_security_template.security.ActiveUserStore;
 import org.springframework.stereotype.Component;
 
 import java.io.Serial;

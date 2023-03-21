@@ -1,4 +1,4 @@
-package me.niallmurray.spring_template.security;
+package me.niallmurray.spring_security_template.security;
 
 import lombok.Getter;
 import lombok.Setter;

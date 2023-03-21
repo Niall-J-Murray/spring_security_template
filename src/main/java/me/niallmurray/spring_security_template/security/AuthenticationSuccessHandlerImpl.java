@@ -1,9 +1,9 @@
-package me.niallmurray.spring_template.security;
+package me.niallmurray.spring_security_template.security;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import me.niallmurray.spring_template.domain.LoggedUser;
+import me.niallmurray.spring_security_template.domain.LoggedUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
