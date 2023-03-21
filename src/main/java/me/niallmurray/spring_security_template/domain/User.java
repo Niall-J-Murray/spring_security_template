@@ -41,14 +41,14 @@ public class User {
     return Objects.equals(id, other.id);
   }
 
-  @Override
-  public String toString() {
-    return "User{" +
-            "id=" + id +
-            ", username='" + username + '\'' +
-            ", password='" + password + '\'' +
-            ", email='" + email + '\'' +
-            ", authorities=" + authorities +
-            '}';
-  }
+//  @Override
+//  public String toString() {
+//    return "User{" +
+//            "id=" + id +
+//            ", username='" + username + '\'' +
+//            ", password='" + password + '\'' +
+//            ", email='" + email + '\'' +
+//            ", authorities=" + authorities +
+//            '}';
+//  }
 }

@@ -1,5 +1,6 @@
 package me.niallmurray.spring_security_template.web;
 
+import me.niallmurray.spring_security_template.domain.Authority;
 import me.niallmurray.spring_security_template.domain.User;
 import me.niallmurray.spring_security_template.security.ActiveUserStore;
 import me.niallmurray.spring_security_template.service.AdminService;
@@ -11,6 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class LoginController {
@@ -40,9 +42,19 @@ public class LoginController {
 //    if (activeUserStore.getUsers().contains(user.getUsername())) {
 //      model.addAttribute("isLoggedIn", true);
 //    }
+    Set<Authority> authorities = user.getAuthorities();
+    System.out.println(authorities);
+
+//*Check if user is admin (has "ROLE_ADMIN") then set isAdmin==true below.
+
+//    System.out.println(user);
+
     if (userService.isLoggedIn(user)) {
       model.addAttribute("isLoggedIn", true);
     }
+//    if (user != null && user.getAuthorities().contains() {
+//      model.addAttribute("isAdmin", true);
+//    }
 
     return "home";
   }

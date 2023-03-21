@@ -26,8 +26,7 @@ public class UserService {
 
     authority.setAuthority("ROLE_USER");
     user.getAuthorities().add(authority);
-
-
+    
     System.out.println(("pw:" + user.getPassword()));
     user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
     System.out.println(("pwe:" + user.getPassword()));
@@ -54,6 +53,9 @@ public class UserService {
   }
 
   public boolean isLoggedIn(User user) {
-    return activeUserStore.getUsers().contains(user.getUsername());
+    if (user != null) {
+      return activeUserStore.getUsers().contains(user.getUsername());
+    }
+    return false;
   }
 }

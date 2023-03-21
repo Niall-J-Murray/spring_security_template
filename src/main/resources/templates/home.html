@@ -8,12 +8,16 @@
 <header>
   <ul>
     <li><a href="/home">Home</a></li>
-    <li><a href="/register">Register</a></li>
-    <li><a href="/login">Login</a></li>
+    <div th:if="${isLoggedIn != true}">
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+    </div>
     <div th:if="${isLoggedIn == true}">
       <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/admin">Admin</a></li>
       <li><a href="/confirm_logout">Logout</a></li>
+    </div>
+    <div th:if="${isAdmin == true}">
+      <li><a href="/admin">Admin</a></li>
     </div>
   </ul>
 </header>
@@ -35,8 +39,9 @@
 <div th:if="${isLoggedIn == true}">
   <div><a href="dashboard">User Dashboard</a></div> <!--Hide if not logged in-->
 </div>
-<div><a href="admin">Admin Dashboard</a></div><!--Hide if not logged in as admin-->
-<div><a href="login">Login</a></div><!--Hide if already logged in-->
-<div><a href="register">Create New Account</a></div><!--Hide if already logged in-->
+<div th:if="${isLoggedIn != true}">
+  <div><a href="login">Login</a></div><!--Hide if already logged in-->
+  <div><a href="register">Create New Account</a></div><!--Hide if already logged in-->
+</div>
 </body>
 </html>

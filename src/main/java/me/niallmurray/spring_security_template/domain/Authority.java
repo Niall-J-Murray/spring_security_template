@@ -13,7 +13,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "authority ")
+@Table(name = "authority")
 public class Authority implements GrantedAuthority {
   @Serial
   private static final long serialVersionUID = -8123526131047887755L;
@@ -40,12 +40,12 @@ public class Authority implements GrantedAuthority {
     return Objects.equals(id, other.id);
   }
 
-//  @Override
-//  public String toString() {
-//    return "Authority{" +
-//            "id=" + id +
-//            ", user=" + user +
-//            ", authority='" + authority + '\'' +
-//            '}';
-//  }
+  @Override
+  public String toString() {
+    return "Authority{" +
+            "id=" + id +
+            ", user=" + user +
+            ", authority='" + authority + '\'' +
+            '}';
+  }
 }
