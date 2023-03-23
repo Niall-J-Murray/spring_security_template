@@ -56,7 +56,7 @@ public class SecurityConfiguration {
             .formLogin()
             .loginPage("/login")
             .successHandler(authenticationSuccessHandler)
-            .failureUrl("/login.html?error=true")
+            .failureUrl("/login?error=true")
             .and()
             .logout()
             .logoutUrl("/confirm_logout")
