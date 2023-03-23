@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -18,11 +19,16 @@ public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+  @Column(nullable = false, unique = true)
   private String username;
-  private String password;
+  @Column(nullable = false, unique = true)
   private String email;
+  @Column(nullable = false)
+  private String password;
   @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "user")
   private Set<Authority> authorities = new HashSet<>();
+  @Column()
+  private LocalDateTime lastLogout;
 
   @Override
   public int hashCode() {

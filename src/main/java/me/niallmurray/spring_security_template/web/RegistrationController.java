@@ -25,20 +25,21 @@ public class RegistrationController {
   @PostMapping("/register")
   public String postCreateUser(ModelMap model, User user) {
 
-    boolean usernameExists = userService.usernameExists(user.getUsername());
-
-    if (usernameExists) {
-      model.addAttribute("userExists", "Username already exists");
+    if (userService.usernameExists(user.getUsername())) {
+      model.addAttribute("userExists", "Username taken");
       return "register";
     }
 
-    if (user.getPassword().length() < 8) {
-      model.addAttribute("badPassword", "Password cannot be less than 8 characters");
+    if (userService.emailExists(user.getEmail())) {
+      model.addAttribute("emailExists", "Email already registered");
       return "register";
     }
-//    user.setPassword(passwordEncoder.encode(user.getPassword()));
-    userService.saveUser(user);
 
+    if (user.getPassword().length() < 6) {
+      model.addAttribute("badPassword", "Password cannot be less than 6 characters");
+      return "register";
+    }
+    userService.createUser(user);
     return "redirect:/login";
   }
 }

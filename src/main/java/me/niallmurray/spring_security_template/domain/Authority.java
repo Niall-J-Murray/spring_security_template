@@ -22,6 +22,7 @@ public class Authority implements GrantedAuthority {
   private Long id;
   @ManyToOne
   private User user;
+  @Column(nullable = false)
   private String authority;
 
   @Override

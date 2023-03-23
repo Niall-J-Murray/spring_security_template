@@ -6,42 +6,39 @@
 </head>
 <body>
 <header>
-  <ul>
+  <ul class="nav-bar">
     <li><a href="/home">Home</a></li>
     <div th:if="${isLoggedIn != true}">
       <li><a href="/register">Register</a></li>
       <li><a href="/login">Login</a></li>
     </div>
+    <div th:if="${isAdmin == true}">
+      <li><a href="/admin">Admin</a></li>
+    </div>
     <div th:if="${isLoggedIn == true}">
       <li><a href="/dashboard">Dashboard</a></li>
       <li><a href="/confirm_logout">Logout</a></li>
     </div>
-    <div th:if="${isAdmin == true}">
-      <li><a href="/admin">Admin</a></li>
-    </div>
   </ul>
 </header>
-<div th:if="${isLoggedIn == true}">
 
+<h1>Home</h1>
+<div th:if="${param.logout != null}">
+  You have been logged out.
+</div>
+<hr>
+<div th:if="${isLoggedIn == true}">
   <p th:text="|Welcome ${user.getUsername()}|"></p>
 </div>
-<h1>Home</h1>
+
 
 <div th:if="${isLoggedIn == true}">
-</div>
-
-<!-- For testing logged in user tracker. Moved to admin dashboard.-->
-<!--<h3>Currently logged-in users:</h3>-->
-<!--<div th:each="activeUser : ${activeUsers}">-->
-<!--  <p th:text="${activeUser}">activeUser</p>-->
-<!--</div>-->
-
-<div th:if="${isLoggedIn == true}">
-  <div><a href="dashboard">User Dashboard</a></div> <!--Hide if not logged in-->
+  <div><a href="/dashboard">Dashboard</a></div>
 </div>
 <div th:if="${isLoggedIn != true}">
-  <div><a href="login">Login</a></div><!--Hide if already logged in-->
-  <div><a href="register">Create New Account</a></div><!--Hide if already logged in-->
+  <div><a href="/login">Login</a></div>
+  -or-
+  <div><a href="/register">Create New Account</a></div>
 </div>
 </body>
 </html>

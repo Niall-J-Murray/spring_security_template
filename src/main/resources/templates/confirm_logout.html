@@ -2,22 +2,15 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
   <link href="/css/general.css" rel="stylesheet" type="text/css"/>
-  <title>Dashboard</title>
+  <title>Logout</title>
 </head>
 <body>
 <header>
-  <ul>
+  <ul class="nav-bar">
     <li><a href="/home">Home</a></li>
-    <li><a href="/register">Register</a></li>
-    <li><a href="/login">Login</a></li>
-    <div th:if="${isLoggedIn == true}">
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/admin">Admin</a></li>
-      <li><a href="/confirm_logout">Logout</a></li>
-    </div>
   </ul>
 </header>
-<h1>Logout Page</h1>
+<h1>Are you sure?</h1>
 <form action="" method="post">
   <input th:name="${_csrf.parameterName}" th:value="${_csrf.token}" type="hidden"/>
   <button type="submit">Confirm Logout</button>

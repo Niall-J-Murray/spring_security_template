@@ -33,20 +33,19 @@ public class LoggedUser implements HttpSessionBindingListener, Serializable {
   @Override
   public void valueBound(HttpSessionBindingEvent event) {
     List<String> users = activeUserStore.getUsers();
-    LoggedUser user = (LoggedUser) event.getValue();
-    if (!users.contains(user.getUsername())) {
-      users.add(user.getUsername());
-      user.setLoggedIn(true);
+    LoggedUser loggedUser = (LoggedUser) event.getValue();
+    if (!users.contains(loggedUser.getUsername())) {
+      users.add(loggedUser.getUsername());
+      loggedUser.setLoggedIn(true);
     }
   }
 
   @Override
   public void valueUnbound(HttpSessionBindingEvent event) {
     List<String> users = activeUserStore.getUsers();
-    LoggedUser user = (LoggedUser) event.getValue();
-    users.remove(user.getUsername());
-    user.setLoggedIn(false);
-
+    LoggedUser loggedUser = (LoggedUser) event.getValue();
+    users.remove(loggedUser.getUsername());
+    loggedUser.setLoggedIn(false);
   }
 
 }

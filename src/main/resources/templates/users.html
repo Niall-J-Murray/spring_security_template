@@ -6,13 +6,17 @@
 </head>
 <body>
 <header>
-  <ul>
+  <ul class="nav-bar">
     <li><a href="/home">Home</a></li>
-    <li><a href="/register">Register</a></li>
-    <li><a href="/login">Login</a></li>
+    <div th:if="${isLoggedIn != true}">
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+    </div>
+    <div th:if="${isAdmin == true}">
+      <li><a href="/admin">Admin</a></li>
+    </div>
     <div th:if="${isLoggedIn == true}">
       <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="/admin">Admin</a></li>
       <li><a href="/confirm_logout">Logout</a></li>
     </div>
   </ul>
